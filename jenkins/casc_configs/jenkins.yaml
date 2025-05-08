@@ -1,0 +1,27 @@
+jenkins:
+  systemMessage: "Jenkins POC 2025 with JCasC"
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: ${JENKINS_ADMIN_ID}
+          password: ${JENKINS_ADMIN_PASSWORD}
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+
+unclassified:
+  location:
+    url: http://localhost:8080/
+
+# jobs:
+#   - script: >
+#       pipelineJob('seed-job') {
+#         definition {
+#           cps {
+#             script(readFileFromWorkspace('jobs/seed-job.groovy'))
+#             sandbox()
+#           }
+#         }
+#       }
+
