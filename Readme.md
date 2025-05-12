@@ -152,7 +152,8 @@ unclassified:
 ```
 
 ## References
-
+- Configulation as Code: https://github.com/jenkinsci/configuration-as-code-plugin
+- Job DSL Plugin: https://jenkinsci.github.io/job-dsl-plugin/
 - Jenkins JCasC Docs: https://www.jenkins.io/projects/jcasc/
 - Shared Libraries: https://www.jenkins.io/blog/2017/10/02/pipeline-templates-with-shared-libraries/
 - Reddit DevOps: https://www.reddit.com/r/devops/comments/1iyjoyf/jenkins_cicd_pipeline_migration_to_gitlab/
