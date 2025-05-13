@@ -14,14 +14,17 @@ unclassified:
   location:
     url: http://localhost:8080/
 
-# jobs:
-#   - script: >
-#       pipelineJob('seed-job') {
-#         definition {
-#           cps {
-#             script(readFileFromWorkspace('jobs/seed-job.groovy'))
-#             sandbox()
-#           }
-#         }
-#       }
+jobs:
+  - script: >
+      pipelineJob('seed-job') {
+        definition {
+          cps {
+            script("""
+              jobDsl targets: 'dsl/**/*.groovy'
+            """.stripIndent())
+            sandbox()
+          }
+        }
+      }
+
 

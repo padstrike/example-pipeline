@@ -20,6 +20,7 @@ services:
       - jenkins_home:/var/jenkins_home
       - ./jenkins/casc_configs:/var/jenkins_home/casc_configs
       - ./jenkins/jobs:/var/jenkins_home/jobs
+      - ./dsl:/var/jenkins_home/workspace/seed-job/dsl
     networks:
       - jenkins-net
 
