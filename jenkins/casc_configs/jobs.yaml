@@ -3,7 +3,7 @@ jobs:
       job('Job_DSL_Seed') {
         scm {
           git {
-            remote { url 'https://github.com/your-org/jenkins-job-dsl.git' }
+            remote { url 'https://github.com/padstrike/example-pipeline.git' }
             branches('*/main')
             extensions {}
           }

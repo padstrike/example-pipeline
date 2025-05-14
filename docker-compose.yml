@@ -15,11 +15,10 @@ services:
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
       - JENKINS_ADMIN_ID=admin
       - JENKINS_ADMIN_PASSWORD=admin123
-      - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/jenkins.yaml
+      - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs
     volumes:
       - jenkins_home:/var/jenkins_home
       - ./jenkins/casc_configs:/var/jenkins_home/casc_configs
-      - ./jenkins/jobs:/var/jenkins_home/jobs
     networks:
       - jenkins-net
 
