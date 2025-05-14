@@ -1,0 +1,21 @@
+jobs:
+  - script: >
+      job('Job_DSL_Seed') {
+        scm {
+          git {
+            remote { url 'https://github.com/your-org/jenkins-job-dsl.git' }
+            branches('*/main')
+            extensions {}
+          }
+        }
+        triggers {
+          scm('H/15 * * * *')
+        }
+        steps {
+          jobDsl {
+            targets 'jobs/**/*.groovy'
+            ignoreExisting(false)
+            removedJobAction('DELETE')
+          }
+        }
+      }
