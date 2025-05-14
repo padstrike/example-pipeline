@@ -1,8 +1,13 @@
+folder('POC') {
+  displayName('POC')
+  description('Folder for Proof of Concept jobs')
+}
+
 pipelineJob('POC/DemoPipeline') {
   description('POC mock pipeline job for testing JCasC + Job DSL')
   definition {
     cps {
-      script('''
+      script('''\
         pipeline {
           agent any
           stages {
